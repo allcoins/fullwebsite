@@ -1,0 +1,84 @@
+<div class="container jumbotron">
+<div class="alert alert-info" *ngIf="_msg">{{_msg}}</div>
+
+	<div class="row">
+	    
+	    <div class="col-md-8 col-md-offset-2">
+	        
+    		<h1>Publicar Notícia</h1>
+    		
+    		    <div class="form-group">
+    		        <label for="title">Titulo <span class="require">*</span></label>
+    		        <input type="text" class="form-control"  [value]="cleanTitulo" name="title" (keyup)="titleKeyUp($event)" />
+    		    </div>
+    		    
+    		    <div class="form-group">
+    		        <label for="description">Descrição</label>
+    		        <textarea rows="5" class="form-control" [value]="cleanDescricao" name="description" (keyup)="descricaoKeyUp($event)" ></textarea>
+    		    </div>
+                <div class="form-group">
+                    <label for="file">Foto</label>
+                    <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+                </div>
+    		    <div class="form-group">
+    		        <p><span class="require">*</span> - Campos Obrigatórios</p>
+    		    </div>
+    		    <!--button (click)="">1-Gravar</button-->
+    		    <div class="form-group">
+    		        <button class="btn btn-primary" (click)="publicarNoticia($event);uploadFileToActivity()">
+    		            Gravar
+    		        </button>
+    		        <button class="btn btn-default">
+    		            Cancelar
+    		        </button>
+    		    </div>
+		</div>
+		
+	</div>
+</div>
+
+
+<!--div class="container text-secondary" style=" border: 2px solid #b8bab8;
+    border-radius: 25px;">
+	<div class="row">
+	    
+	    <div class="col-md-8 col-md-offset-2">
+	        
+    		<h1>Publicar Notícia</h1>
+    		
+    		<form >  
+    		    <div class="form-group">
+    		        <label for="title">Titulo <span class="require">*</span></label>
+    		        <input type="text" class="form-control" name="title" />
+    		    </div>
+    		    
+    		    <div class="form-group">
+    		        <label for="description">Descrição</label>
+    		        <textarea rows="5" class="form-control" name="description" ></textarea>
+    		    </div>
+                  
+                   <div class="form-group">
+    		        <label for="title">Data: <span class="require">YYYY-MM-DD</span></label>
+    		        <input type="text" class="form-control" name="data" />
+    		    </div>
+    		    
+    		    <div class="form-group">
+    		        <p><span class="require">*</span> - Campos Obrigatórios</p>
+    		    </div>
+    		    
+    		    
+    		    
+    		    <div class="form-group">
+    		        <button class="btn btn-primary" (click)="publicarNoticia()">
+    		            Gravar
+    		        </button>
+    		        <button class="btn btn-default">
+    		            Cancelar
+    		        </button>
+    		    </div>
+    		    
+    		</form>
+		</div>
+		
+	</div>
+</div-->
